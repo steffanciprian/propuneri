@@ -551,6 +551,7 @@ function render() {
     html += `</div><div class="legend"><span><i style="background:var(--bg);border:1px solid var(--line)"></i>liber</span><span><i style="border:1px solid var(--muted);opacity:.5"></i>${esc(B.takenLabel || 'ocupat')}</span></div>`;
     if (name === 'range') {
       const n = rangeNights();
+      if (st.rangeErr) html += `<p class="err" style="margin-top:10px">${esc(st.rangeErr)}</p>`;
       if (n.length) html += `<div class="summary" style="margin-top:14px"><div><span>${n.length} ${n.length === 1 ? 'noapte' : 'nopți'} · ${esc(optName(st.opt))}</span><b>${lei(n.reduce((a, d) => a + nightPrice(d), 0))}</b></div></div>`;
       canNext = n.length > 0;
     } else canNext = !!st.day;
@@ -593,8 +594,8 @@ function bind(name) {
   $$('.cal button[data-k]', body).forEach((b) => b.onclick = () => {
     const d = new Date(b.dataset.k + 'T00:00');
     if (name === 'date') st.day = b.dataset.k;
-    else if (!st.from || st.to || d <= st.from) { st.from = d; st.to = null; }
-    else { const x = new Date(st.from); let ok = true; x.setDate(x.getDate() + 1); while (x < d) { if (dayTaken(x)) ok = false; x.setDate(x.getDate() + 1); } if (ok) st.to = d; else { st.from = d; st.to = null; } }
+    else if (!st.from || st.to || d <= st.from) { st.from = d; st.to = null; st.rangeErr = ''; }
+    else { const x = new Date(st.from); let ok = true; x.setDate(x.getDate() + 1); while (x < d) { if (dayTaken(x)) ok = false; x.setDate(x.getDate() + 1); } if (ok) { st.to = d; st.rangeErr = ''; } else { st.from = d; st.to = null; st.rangeErr = 'Între datele alese e o noapte ocupată. Am luat ziua aleasă ca nouă dată de sosire.'; } }
     render();
   });
   const back = $('#bk-back'); if (back) back.onclick = () => { st.step--; render(); };
