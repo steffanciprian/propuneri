@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0f2a33">
+<title>Ana Dental Care · Stomatologie în Colentina</title>
+<meta name="description" content="Ana Dental Care, Str. Moroeni 72, București. Urgențe stomatologice, estetică dentară, ortodonție, implanturi. 0752 960 533.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Playfair+Display:wght@700;800&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#f6fafb; --paper:#ffffff; --ink:#0f2a33; --muted:#5a7079; --line:#dde8ea; --accent:#0e8f8a; --accent2:#0a6d69; --band:#0f3d44; --on:#ffffff; --serif:'Fraunces', Georgia, serif; }
+  * { box-sizing: border-box; margin: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+  body { font-family: Inter, system-ui, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.55; }
+  body.lock { overflow: hidden; }
+  a { color: inherit; }
+  button { font: inherit; color: inherit; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  h1, h2, .logo, .sheet-head h3 { font-family: var(--serif); }
+  h2 { font-size: clamp(30px, 4vw, 42px); line-height: 1.12; margin-bottom: 8px; text-wrap: balance; }
+  .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent2); margin-bottom: 10px; }
+  .band .eyebrow { color: var(--accent); }
+  .sub { color: var(--muted); margin-bottom: 28px; max-width: 600px; font-size: 17px; }
+  section { padding: 80px 0; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .demo { background: var(--ink); color: rgba(255,255,255,.72); font-size: 12px; text-align: center; padding: 6px 16px; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--accent); color: var(--on); text-decoration: none; font-weight: 700; padding: 14px 22px; border-radius: 12px; font-size: 15px; border: 0; cursor: pointer; transition: background .2s, transform .1s; }
+  .btn:hover { background: var(--accent2); color: #fff; }
+  .btn:active { transform: scale(.98); }
+  .btn.ghost { background: rgba(255,255,255,.12); color: #fff; border: 1px solid rgba(255,255,255,.4); }
+  .btn.ghost:hover { background: rgba(255,255,255,.22); }
+  .btn.line { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+  .btn.line:hover { background: var(--bg); color: var(--ink); }
+  .btn[disabled] { opacity: .4; cursor: not-allowed; }
+
+  /* Meniu fix */
+  .site-head { position: fixed; top: 0; left: 0; right: 0; z-index: 40; transition: background .25s, box-shadow .25s, color .25s, top .25s; color: #fff; }
+  .site-head.top { top: 30px; }
+  .site-head.solid { top: 0; background: color-mix(in srgb, var(--paper) 94%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); color: var(--ink); box-shadow: 0 1px 0 var(--line); padding-top: env(safe-area-inset-top, 0px); }
+  .site-head .wrap { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 16px; }
+  .logo { font-weight: 700; font-size: 23px; text-decoration: none; line-height: 1.05; }
+  .logo small { display: block; font-family: Inter, sans-serif; font-weight: 600; font-size: 10.5px; letter-spacing: .22em; text-transform: uppercase; opacity: .75; }
+  .site-head nav { display: flex; align-items: center; gap: 22px; }
+  .site-head nav a { text-decoration: none; font-size: 15px; font-weight: 500; opacity: .9; }
+  .site-head nav a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 4px; }
+  .head-cta { padding: 10px 16px; font-size: 14px; }
+  .burger { display: none; width: 44px; height: 44px; border-radius: 12px; border: 0; background: transparent; cursor: pointer; position: relative; }
+  .burger span { position: absolute; left: 11px; right: 11px; height: 2px; background: currentColor; border-radius: 2px; }
+  .burger span:nth-child(1) { top: 15px; } .burger span:nth-child(2) { top: 21px; } .burger span:nth-child(3) { top: 27px; }
+  .drawer { position: fixed; inset: 0; z-index: 60; background: var(--ink); color: #fff; display: flex; flex-direction: column; padding: calc(12px + env(safe-area-inset-top, 0px)) 24px calc(24px + env(safe-area-inset-bottom, 0px)); transform: translateY(-100%); transition: transform .3s ease, visibility .3s; visibility: hidden; overflow-y: auto; }
+  .drawer.open { transform: none; visibility: visible; }
+  .drawer-top { display: flex; justify-content: space-between; align-items: center; min-height: 56px; }
+  .x { width: 44px; height: 44px; border: 0; border-radius: 12px; background: rgba(255,255,255,.12); color: #fff; font-size: 26px; line-height: 1; cursor: pointer; flex: none; }
+  .drawer nav { display: flex; flex-direction: column; margin-top: 14px; }
+  .drawer nav a { font-family: var(--serif); font-size: 30px; text-decoration: none; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.1); }
+  .drawer .d-foot { margin-top: auto; padding-top: 24px; display: grid; gap: 10px; }
+  .drawer .d-foot p { color: rgba(255,255,255,.65); font-size: 14px; }
+
+  /* Sus: slideshow */
+  .hero { position: relative; color: #fff; min-height: min(88vh, 760px); display: flex; align-items: flex-end; overflow: hidden; background: var(--ink); }
+  .slide { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; transform: scale(1.06); transition: opacity 1.1s ease, transform 7s ease; }
+  .slide.on { opacity: 1; transform: scale(1); }
+  .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.5) 0%, rgba(0,0,0,.15) 35%, rgba(0,0,0,.8) 100%); }
+  .hero .wrap { position: relative; z-index: 2; width: 100%; padding-top: 150px; padding-bottom: 76px; }
+  .status { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.25); padding: 6px 12px; border-radius: 999px; backdrop-filter: blur(6px); }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: #6fd27a; }
+  .dot.closed { background: #e2735d; }
+  h1 { font-size: clamp(40px, 6.5vw, 74px); line-height: 1.03; margin: 18px 0 16px; max-width: 780px; text-wrap: balance; }
+  .hero p.lead { font-size: 19px; max-width: 560px; color: rgba(255,255,255,.9); }
+  .hero .extra { margin-top: 12px; font-size: 16px; color: #fff; }
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+  .sdots { position: absolute; z-index: 3; right: 20px; bottom: 50px; display: flex; gap: 8px; }
+  .sdot { width: 28px; height: 4px; border-radius: 4px; border: 0; background: rgba(255,255,255,.4); cursor: pointer; padding: 0; }
+  .sdot.on { background: #fff; }
+
+  .facts { position: relative; z-index: 3; margin-top: -36px; }
+  .facts .wrap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .fact { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; box-shadow: 0 12px 30px rgba(0,0,0,.08); display: flex; gap: 12px; align-items: center; text-decoration: none; min-width: 0; }
+  .fact .fi { width: 40px; height: 40px; border-radius: 12px; background: color-mix(in srgb, var(--accent) 14%, transparent); display: grid; place-items: center; font-size: 19px; flex: none; }
+  .fact small { display: block; color: var(--muted); font-size: 12.5px; }
+  .fact b { display: block; font-size: 15px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .fact > span:last-child { min-width: 0; }
+
+  .about-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; }
+  .about-grid img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 22px; }
+  .about .lead { font-size: 18px; color: var(--muted); }
+
+  .feats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .feat { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 22px; transition: transform .2s, box-shadow .2s; }
+  .feat:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,.06); }
+  .feat .fi { display: inline-grid; place-items: center; width: 42px; height: 42px; border-radius: 12px; background: color-mix(in srgb, var(--accent) 13%, transparent); font-size: 20px; margin-bottom: 12px; }
+  .feat h3 { font-size: 17px; margin-bottom: 6px; }
+  .feat p { color: var(--muted); font-size: 15px; }
+  .more { display: none; }
+
+  .band { background: var(--band); color: #fff; }
+  .band .sub { color: rgba(255,255,255,.72); }
+  .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+  .tabs button { font-size: 14px; font-weight: 600; color: #fff; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.2); border-radius: 999px; padding: 10px 16px; cursor: pointer; }
+  .tabs button.on { background: var(--accent); border-color: var(--accent); color: var(--on); }
+  .price-grid .cat { display: none; max-width: 720px; }
+  .price-grid .cat.on { display: block; animation: fade .3s ease; }
+  .price-grid h3 { display: none; }
+  .item { display: flex; align-items: baseline; gap: 10px; padding: 13px 0; border-bottom: 1px solid rgba(255,255,255,.1); }
+  .item .dots { flex: 1; border-bottom: 1px dotted rgba(255,255,255,.25); transform: translateY(-4px); }
+  .item small { display: block; color: rgba(255,255,255,.6); font-size: 13px; }
+  .item b { white-space: nowrap; }
+  .band-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; margin-top: 26px; }
+  .note { color: rgba(255,255,255,.6); font-size: 13px; }
+  @keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+
+  .gal { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 200px; gap: 12px; }
+  .gal .g { border: 0; padding: 0; border-radius: 16px; overflow: hidden; cursor: zoom-in; background: var(--line); }
+  .gal .g img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s ease; }
+  .gal .g:hover img { transform: scale(1.05); }
+  .gal .big { grid-column: span 2; grid-row: span 2; }
+  .gal-hint { display: none; color: var(--muted); font-size: 13px; margin-top: 10px; }
+  .lightbox { position: fixed; inset: 0; z-index: 70; background: rgba(8,8,8,.95); display: none; align-items: center; justify-content: center; }
+  .lightbox.open { display: flex; }
+  .lightbox img { max-width: min(94vw, 1200px); max-height: 80vh; border-radius: 10px; object-fit: contain; user-select: none; -webkit-user-drag: none; }
+  .lb-btn { position: absolute; top: 50%; transform: translateY(-50%); width: 52px; height: 52px; border-radius: 50%; border: 0; background: rgba(255,255,255,.14); color: #fff; font-size: 30px; cursor: pointer; }
+  .lb-prev { left: 16px; } .lb-next { right: 16px; }
+  .lb-top { position: absolute; top: calc(14px + env(safe-area-inset-top, 0px)); left: 16px; right: 16px; display: flex; justify-content: space-between; align-items: center; color: #fff; font-size: 14px; }
+  .lb-dots { position: absolute; bottom: calc(22px + env(safe-area-inset-bottom, 0px)); left: 0; right: 0; display: flex; justify-content: center; gap: 6px; }
+  .lb-dots i { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,.35); }
+  .lb-dots i.on { background: #fff; }
+
+  .faq { max-width: 760px; }
+  .faq details { border-bottom: 1px solid var(--line); }
+  .faq summary { list-style: none; cursor: pointer; padding: 18px 40px 18px 0; font-weight: 600; font-size: 17px; position: relative; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; position: absolute; right: 4px; top: 14px; font-size: 24px; color: var(--accent2); transition: transform .2s; }
+  .faq details[open] summary::after { transform: rotate(45deg); }
+  .faq details p { color: var(--muted); padding: 0 0 18px; }
+
+  .visit { background: var(--paper); border-top: 1px solid var(--line); }
+  .visit .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
+  .contact { list-style: none; padding: 0; margin-bottom: 22px; }
+  .contact li { border-bottom: 1px solid var(--line); }
+  .contact a, .contact div { display: flex; justify-content: space-between; gap: 12px; padding: 14px 0; text-decoration: none; }
+  .contact span { color: var(--muted); flex: none; }
+  .contact b { text-align: right; overflow-wrap: anywhere; }
+  .contact a b::after { content: " ›"; color: var(--muted); }
+  .hrs { margin-bottom: 18px; }
+  .hrs summary { list-style: none; cursor: pointer; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; padding: 4px 0 10px; }
+  .hrs summary::-webkit-details-marker { display: none; }
+  .hrs .h { font-size: 18px; font-weight: 700; }
+  .hrs .h small { font-weight: 400; color: var(--muted); font-size: 13px; }
+  .today-line { color: var(--accent2); font-weight: 600; }
+  .chev { margin-left: auto; color: var(--muted); font-size: 14px; font-weight: 600; }
+  .chev::after { content: " ▾"; }
+  .hrs[open] .chev, .hrs[open] .today-line { display: none; }
+  .hours { width: 100%; border-collapse: collapse; }
+  .hours td { padding: 8px 0; border-bottom: 1px solid var(--line); }
+  .hours td:last-child { text-align: right; }
+  .hours tr.today td { color: var(--accent2); font-weight: 700; }
+  .groups { background: var(--bg); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; color: var(--muted); font-size: 15px; margin-bottom: 18px; }
+  .groups b { color: var(--ink); }
+  .map { border-radius: 18px; overflow: hidden; border: 1px solid var(--line); min-height: 380px; background: var(--bg); }
+  .map iframe { width: 100%; height: 100%; min-height: 380px; border: 0; display: block; }
+  .dir { margin-top: 12px; width: 100%; }
+
+  footer { background: var(--ink); color: rgba(255,255,255,.7); padding: 48px 0 32px; font-size: 14px; }
+  footer .wrap { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 28px; }
+  footer .logo { color: #fff; display: inline-block; margin-bottom: 10px; }
+  footer h4 { color: #fff; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 10px; }
+  footer nav { display: grid; gap: 6px; }
+  footer a { text-decoration: none; }
+  footer a:hover { color: #fff; }
+  footer .legal { grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,.12); padding-top: 18px; font-size: 12.5px; }
+
+  .callbar { display: none; position: fixed; left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); z-index: 30; gap: 10px; }
+  .callbar a, .callbar button { flex: 1; padding: 15px; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+  .callbar .alt { background: var(--paper); color: var(--ink); }
+
+  /* Programare */
+  .modal { position: fixed; inset: 0; z-index: 80; display: none; align-items: center; justify-content: center; background: rgba(10,10,10,.55); padding: 16px; }
+  .modal.open { display: flex; }
+  .sheet { background: var(--paper); color: var(--ink); width: min(560px, 100%); max-height: min(92vh, 860px); border-radius: 22px; display: flex; flex-direction: column; overflow: hidden; animation: up .28s ease; }
+  @keyframes up { from { transform: translateY(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+  .sheet-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 18px 20px 12px; }
+  .sheet-head h3 { font-size: 25px; line-height: 1.1; }
+  .sheet-head .x { background: var(--bg); color: var(--ink); }
+  .steps { display: flex; gap: 6px; padding: 0 20px 12px; border-bottom: 1px solid var(--line); }
+  .steps i { flex: 1; height: 4px; border-radius: 4px; background: var(--line); }
+  .steps i.on { background: var(--accent); }
+  .sheet-body { padding: 16px 20px 20px; overflow-y: auto; }
+  .sheet-foot { display: flex; gap: 10px; padding: 14px 20px calc(14px + env(safe-area-inset-bottom, 0px)); border-top: 1px solid var(--line); background: var(--paper); }
+  .sheet-foot .btn { flex: 1; }
+  .lbl { font-size: 12.5px; font-weight: 700; color: var(--muted); letter-spacing: .06em; text-transform: uppercase; margin: 18px 0 8px; }
+  .lbl:first-child { margin-top: 0; }
+  .opts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .opt { text-align: left; border: 1.5px solid var(--line); background: var(--bg); border-radius: 14px; padding: 12px 14px; cursor: pointer; font-weight: 600; }
+  .opt small { display: block; color: var(--muted); font-size: 13px; font-weight: 400; }
+  .opt.on { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, var(--paper)); }
+  .days { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 6px; scroll-snap-type: x proximity; scrollbar-width: thin; }
+  .day { flex: 0 0 66px; scroll-snap-align: start; border: 1.5px solid var(--line); background: var(--bg); border-radius: 14px; padding: 8px 0; text-align: center; cursor: pointer; }
+  .day small { display: block; font-size: 11.5px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+  .day b { display: block; font-size: 20px; line-height: 1.2; }
+  .day em { display: block; font-style: normal; font-size: 11px; color: var(--accent2); }
+  .day.on { border-color: var(--accent); background: var(--accent); color: var(--on); }
+  .day.on small, .day.on em { color: inherit; opacity: .9; }
+  .day[disabled] { opacity: .4; cursor: not-allowed; }
+  .slots { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .slot { border: 1.5px solid var(--line); background: var(--bg); border-radius: 12px; padding: 10px 0; text-align: center; font-weight: 600; cursor: pointer; font-variant-numeric: tabular-nums; }
+  .slot.on { border-color: var(--accent); background: var(--accent); color: var(--on); }
+  .slot[disabled] { opacity: .35; text-decoration: line-through; cursor: not-allowed; }
+  .legend { display: flex; gap: 14px; font-size: 12.5px; color: var(--muted); margin-top: 10px; flex-wrap: wrap; }
+  .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
+  .cal-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+  .cal-head b { font-size: 16px; text-transform: capitalize; }
+  .cal-nav { width: 40px; height: 40px; border-radius: 10px; border: 1px solid var(--line); background: var(--bg); cursor: pointer; font-size: 20px; }
+  .cal-nav[disabled] { opacity: .3; cursor: not-allowed; }
+  .cal { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; text-align: center; }
+  .cal .wd { font-size: 11.5px; color: var(--muted); font-weight: 600; padding: 4px 0; }
+  .cal button { aspect-ratio: 1; border-radius: 10px; border: 0; background: var(--bg); cursor: pointer; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .cal button.taken { background: transparent; color: var(--muted); text-decoration: line-through; opacity: .55; cursor: not-allowed; }
+  .cal button.past { background: transparent; opacity: .3; cursor: not-allowed; }
+  .cal button.on, .cal button.edge { background: var(--accent); color: var(--on); }
+  .cal button.mid { background: color-mix(in srgb, var(--accent) 22%, var(--paper)); border-radius: 4px; }
+  .stepper { display: flex; align-items: center; gap: 14px; }
+  .stepper button { width: 46px; height: 46px; border-radius: 12px; border: 1.5px solid var(--line); background: var(--bg); font-size: 22px; cursor: pointer; }
+  .stepper b { font-size: 24px; min-width: 34px; text-align: center; font-variant-numeric: tabular-nums; }
+  .field { display: grid; gap: 6px; margin-bottom: 12px; }
+  .field label { font-size: 14px; font-weight: 600; }
+  .field input, .field textarea { font: inherit; padding: 13px 14px; border-radius: 12px; border: 1.5px solid var(--line); background: var(--bg); color: var(--ink); width: 100%; }
+  .field input:focus, .field textarea:focus { outline: none; border-color: var(--accent); }
+  .err { color: #b4473a; font-size: 13px; min-height: 18px; }
+  .summary { background: var(--bg); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; display: grid; gap: 6px; font-size: 15px; }
+  .summary div { display: flex; justify-content: space-between; gap: 12px; }
+  .summary span { color: var(--muted); }
+  .summary b { text-align: right; }
+  .done { text-align: center; padding: 6px 0 14px; }
+  .done .check { width: 64px; height: 64px; border-radius: 50%; background: var(--accent); color: var(--on); display: grid; place-items: center; font-size: 32px; margin: 0 auto 14px; animation: pop .35s ease; }
+  @keyframes pop { from { transform: scale(.6); } to { transform: scale(1); } }
+  .done h4 { font-family: var(--serif); font-size: 26px; margin-bottom: 6px; }
+  .done .ref { display: inline-block; margin: 10px 0 0; font-weight: 700; letter-spacing: .08em; background: var(--bg); border: 1px dashed var(--line); padding: 6px 12px; border-radius: 8px; }
+  .demo-note { font-size: 12.5px; color: var(--muted); margin-top: 12px; }
+
+  @media (max-width: 900px) {
+    .site-head nav { display: none; }
+    .burger { display: block; }
+    section { padding: 56px 0; }
+    .hero { min-height: 86vh; }
+    .hero .wrap { padding-bottom: 70px; }
+    .sdots { left: 20px; right: auto; bottom: 46px; }
+    .facts .wrap { grid-template-columns: 1fr; gap: 8px; }
+    .about-grid, .visit .wrap { grid-template-columns: 1fr; gap: 24px; }
+    .feats { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .feat { padding: 16px; }
+    .feat h3 { font-size: 15px; }
+    .feat p { font-size: 14px; }
+    .feats:not(.all) .extra-feat { display: none; }
+    .more { display: block; width: 100%; margin-top: 12px; font-weight: 600; font-size: 15px; color: var(--ink); background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 13px; cursor: pointer; }
+    .more::after { content: " ▾"; color: var(--muted); }
+    .tabs { flex-wrap: nowrap; overflow-x: auto; margin: 0 -20px 14px; padding: 0 20px 4px; scrollbar-width: none; }
+    .tabs button { flex: none; }
+    .gal { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 10px; margin: 0 -20px; padding: 0 20px 6px; scrollbar-width: none; }
+    .gal .g, .gal .big { flex: 0 0 82%; height: 270px; scroll-snap-align: center; }
+    .gal::-webkit-scrollbar, .tabs::-webkit-scrollbar { display: none; }
+    .gal-hint { display: block; }
+    .map, .map iframe { min-height: 260px; }
+    .lb-btn { display: none; }
+    footer .wrap { grid-template-columns: 1fr 1fr; }
+    footer .wrap > div:first-child { grid-column: 1 / -1; }
+    footer { padding-bottom: calc(100px + env(safe-area-inset-bottom)); }
+    .callbar { display: flex; }
+    .modal { padding: 0; align-items: flex-end; }
+    .sheet { width: 100%; max-height: 94vh; border-radius: 22px 22px 0 0; }
+    .slots { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width: 520px) {
+    .wrap { padding: 0 16px; }
+    .tabs, .gal { margin-left: -16px; margin-right: -16px; padding-left: 16px; padding-right: 16px; }
+    h1 { font-size: 38px; }
+    .hero p.lead { font-size: 17px; }
+    .actions .btn { flex: 1 1 auto; }
+    .opts { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 370px) { .feats { grid-template-columns: 1fr; } }
+  @media (prefers-reduced-motion: reduce) { *, .slide { transition: none !important; animation: none !important; } html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<div class="demo">Propunere de site: pozele sunt de test; programul, serviciile și prețurile sunt de pe site-ul vechi.</div>
+
+<header class="site-head top" id="head">
+  <div class="wrap">
+    <a class="logo" href="#top">Ana Dental Care<small>Stomatologie</small></a>
+    <nav aria-label="Meniu"><a href="#servicii">Servicii</a><a href="#preturi">Prețuri</a><a href="#galerie">Galerie</a><a href="#intrebari">Întrebări</a><a href="#contact">Contact</a><button type="button" class="btn head-cta" data-book>Programează-te</button></nav>
+    <button type="button" class="burger" id="burger" aria-label="Deschide meniul" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-top"><span class="logo">Ana Dental Care<small>Stomatologie</small></span><button type="button" class="x" id="drawer-x" aria-label="Închide meniul">×</button></div>
+  <nav aria-label="Meniu"><a href="#servicii">Servicii</a><a href="#preturi">Prețuri</a><a href="#galerie">Galerie</a><a href="#intrebari">Întrebări</a><a href="#contact">Contact</a></nav>
+  <div class="d-foot">
+    <button type="button" class="btn" data-book>Programează-te</button>
+    <a class="btn ghost" href="tel:+40752960533">📞 0752 960 533</a>
+    <p>Str. Moroeni 72, Sector 2, București</p>
+  </div>
+</div>
+
+<main id="top">
+  <section class="hero" aria-label="Prezentare">
+    <div class="slide on" style="background-image:url(img/hero.jpg)"></div><div class="slide" style="background-image:url(img/s2.jpg)"></div><div class="slide" style="background-image:url(img/s3.jpg)"></div>
+    <div class="wrap">
+      <span class="status"><span class="dot" id="dot"></span><span id="status">Program</span></span>
+      <h1>Fără durere, fără teamă, cu zâmbetul înapoi.</h1>
+      <p class="lead">Te așteptăm într-un ambient plăcut, la standarde europene și cu prețuri corecte, pe Str. Moroeni 72.</p>
+      <p class="extra">Urgențe stomatologice: sună-ne oricând.</p>
+      <div class="actions">
+        <button type="button" class="btn" data-book>Programează-te</button>
+        <a class="btn ghost" href="#servicii">Vezi serviciile</a>
+      </div>
+    </div>
+    <div class="sdots"><button type="button" class="sdot on" aria-label="Poza 1" data-i="0"></button><button type="button" class="sdot" aria-label="Poza 2" data-i="1"></button><button type="button" class="sdot" aria-label="Poza 3" data-i="2"></button></div>
+  </section>
+
+  <div class="facts">
+    <div class="wrap">
+      <a class="fact" href="#contact"><span class="fi" aria-hidden="true">📍</span><span><small>Adresă</small><b>Str. Moroeni 72, Sector 2, București</b></span></a>
+      <a class="fact" href="#contact"><span class="fi" aria-hidden="true">🕒</span><span><small>Azi</small><b id="fact-today">Vezi programul</b></span></a>
+      <a class="fact" href="tel:+40752960533"><span class="fi" aria-hidden="true">📞</span><span><small>Telefon</small><b>0752 960 533</b></span></a>
+    </div>
+  </div>
+
+  <section id="servicii">
+    <div class="wrap">
+      <p class="eyebrow">Ana Dental Care</p>
+      <h2>Servicii stomatologice</h2>
+      <p class="sub">Dotări de ultimă oră și materiale de cea mai bună calitate, cu sterilizare completă la fiecare pacient.</p>
+      <div class="feats">
+        <div class="feat"><span class="fi" aria-hidden="true">🦷</span><h3>Reabilitare orală</h3><p>Refacerea completă și estetică a zâmbetului.</p></div>
+        <div class="feat"><span class="fi" aria-hidden="true">✨</span><h3>Estetică dentară</h3><p>Albire, fațete, remodelarea gingiilor, bijuterii dentare.</p></div>
+        <div class="feat"><span class="fi" aria-hidden="true">😁</span><h3>Ortodonție</h3><p>Aparate dentare pentru dinți așezați corect și o mușcătură corectă.</p></div>
+        <div class="feat"><span class="fi" aria-hidden="true">🔩</span><h3>Implanturi dentare</h3><p>Implantul înlocuiește rădăcina și reface dintele pierdut.</p></div>
+        <div class="feat extra-feat"><span class="fi" aria-hidden="true">🌿</span><h3>Parodontologie</h3><p>Tratamentul gingiilor și al țesuturilor care susțin dinții.</p></div>
+        <div class="feat extra-feat"><span class="fi" aria-hidden="true">👑</span><h3>Protetică dentară</h3><p>Salvăm cât mai mulți dinți și îi refacem cu lucrări durabile.</p></div>
+      </div>
+      <button class="more" type="button" onclick="this.previousElementSibling.classList.add('all');this.remove()">Vezi toate (6)</button>
+    </div>
+  </section>
+
+  <section class="band" id="preturi">
+    <div class="wrap">
+      <h2>Prețuri</h2>
+      <p class="sub">Câteva dintre tarifele noastre. Restul le afli la consultație.</p>
+      <div class="tabs" role="tablist"><button type="button" class="on" data-t="0">Consultații</button><button type="button" class="" data-t="1">Profilaxie</button><button type="button" class="" data-t="2">Ortodonție</button></div>
+      <div class="price-grid"><div class="cat on"><h3>Consultații</h3><div class="item"><span>Consultație inițială</span><span class="dots"></span><b>20 lei</b></div><div class="item"><span>Consultație specialist ortodont</span><span class="dots"></span><b>100 lei</b></div></div><div class="cat"><h3>Profilaxie</h3><div class="item"><span>Fluorizare topică<small>pe arcadă</small></span><span class="dots"></span><b>50 lei</b></div><div class="item"><span>Aplicare desensibilizant<small>pe dinte</small></span><span class="dots"></span><b>50 lei</b></div><div class="item"><span>Sigilare dinte</span><span class="dots"></span><b>50 lei</b></div></div><div class="cat"><h3>Ortodonție</h3><div class="item"><span>Aparat cu bracket-uri metalice<small>pe arcadă</small></span><span class="dots"></span><b>2.000 lei</b></div></div></div>
+      <div class="band-cta"><button type="button" class="btn" data-book>Programează-te</button><p class="note">Prețuri preluate de pe site-ul vostru vechi (2019): se actualizează cu cele de azi.</p></div>
+    </div>
+  </section>
+  <section id="galerie">
+    <div class="wrap">
+      <p class="eyebrow">Galerie</p>
+      <h2>Cabinetul</h2>
+      <p class="sub">Curat, luminos și sterilizat după fiecare pacient.</p>
+      <div class="gal"><button type="button" class="g big" data-g="0" aria-label="Deschide poza 1"><img src="img/chair.jpg" alt="" loading="lazy"></button><button type="button" class="g" data-g="1" aria-label="Deschide poza 2"><img src="img/clinic.jpg" alt="" loading="lazy"></button><button type="button" class="g" data-g="2" aria-label="Deschide poza 3"><img src="img/exam.jpg" alt="" loading="lazy"></button><button type="button" class="g" data-g="3" aria-label="Deschide poza 4"><img src="img/aligner.jpg" alt="" loading="lazy"></button><button type="button" class="g" data-g="4" aria-label="Deschide poza 5"><img src="img/xray.jpg" alt="" loading="lazy"></button></div>
+      <p class="gal-hint">Glisează pentru mai multe poze · atinge una ca s-o vezi mare</p>
+    </div>
+  </section>
+
+  <section id="intrebari">
+    <div class="wrap">
+      <p class="eyebrow">Întrebări frecvente</p>
+      <h2>Ce ne întreabă lumea</h2>
+      <div class="faq"><details><summary>Doare tratamentul?</summary><p>Folosim anestezie locală, așa că majoritatea tratamentelor nu dor. Îți explicăm fiecare pas înainte.</p></details><details><summary>Cât durează o consultație?</summary><p>Prima consultație durează în jur de 30 de minute: control, radiografie dacă e nevoie și plan de tratament cu prețuri.</p></details><details><summary>Pot veni cu o urgență?</summary><p>Da. Sună-ne și încercăm să te primim chiar în aceeași zi.</p></details><details><summary>Primiți și copii?</summary><p>Da, avem răbdare cu cei mici și le facem prima vizită cât mai ușoară.</p></details><details><summary>Cum pot plăti?</summary><p>Numerar sau card. Pentru tratamente mai mari putem împărți plata în etape.</p></details></div>
+    </div>
+  </section>
+
+  <section class="visit" id="contact">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2>Programări</h2>
+        <p class="sub">Ne găsești în Colentina, pe Str. Moroeni.</p>
+        <ul class="contact"><li><div><span>Adresă</span><b>Str. Moroeni 72, Sector 2, București</b></div></li><li><a href="tel:+40752960533"><span>Telefon</span><b>0752 960 533</b></a></li><li><a href="https://www.facebook.com/741770385860931" target="_blank" rel="noopener"><span>Facebook</span><b>Ana Dental Care</b></a></li></ul>
+        <details class="hrs" id="hrs">
+          <summary><span class="h">Program</span><span class="today-line" id="today-line"></span><span class="chev">Vezi tot programul</span></summary>
+          <table class="hours" id="hours">
+            <tr data-days="1,2,3,4,5"><td>Luni – Vineri</td><td>08:00 – 20:00</td></tr>
+            <tr data-days="6"><td>Sâmbătă</td><td>10:00 – 14:00</td></tr>
+            <tr data-days="0"><td>Duminică</td><td>Închis</td></tr>
+          </table>
+        </details>
+        <p class="groups"><b>Urgențe stomatologice:</b> sună la 0752 960 533 și te ajutăm cât mai repede.</p>
+        <button type="button" class="btn" data-book>Programează-te</button>
+      </div>
+      <div>
+        <div class="map"><iframe title="Hartă Ana Dental Care" loading="lazy" src="https://www.google.com/maps?q=44.47738,26.1714&z=15&output=embed"></iframe></div>
+        <a class="btn line dir" href="https://www.google.com/maps/dir/?api=1&destination=44.47738,26.1714" target="_blank" rel="noopener">🧭 Indicații de drum</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><span class="logo">Ana Dental Care<small>Stomatologie</small></span><p>Te așteptăm într-un ambient plăcut, la standarde europene și cu prețuri corecte, pe Str. Moroeni 72.</p></div>
+    <div><h4>Meniu</h4><nav><a href="#servicii">Servicii</a><a href="#preturi">Prețuri</a><a href="#galerie">Galerie</a><a href="#intrebari">Întrebări</a><a href="#contact">Contact</a></nav></div>
+    <div><h4>Contact</h4><nav><a href="tel:+40752960533">0752 960 533</a><a href="https://www.google.com/maps/dir/?api=1&destination=44.47738,26.1714" target="_blank" rel="noopener">Str. Moroeni 72, Sector 2, București</a><a href="#" data-book>Programează-te</a></nav></div>
+    <p class="legal">© 2026 Ana Dental Care · Site demo: conținutul de test se înlocuiește cu cel real.</p>
+  </div>
+</footer>
+
+<div class="callbar" id="callbar">
+  <a class="btn alt" href="tel:+40752960533">📞 Sună</a>
+  <button type="button" class="btn" data-book>Programează</button>
+</div>
+
+<div class="lightbox" id="lb" role="dialog" aria-modal="true" aria-label="Galerie">
+  <div class="lb-top"><span id="lb-count"></span><button type="button" class="x" id="lb-x" aria-label="Închide galeria">×</button></div>
+  <button type="button" class="lb-btn lb-prev" id="lb-prev" aria-label="Poza anterioară">‹</button>
+  <img id="lb-img" alt="">
+  <button type="button" class="lb-btn lb-next" id="lb-next" aria-label="Poza următoare">›</button>
+  <div class="lb-dots" id="lb-dots"></div>
+</div>
+
+<div class="modal" id="bk" role="dialog" aria-modal="true" aria-labelledby="bk-title">
+  <div class="sheet">
+    <div class="sheet-head"><h3 id="bk-title">Programează-te</h3><button type="button" class="x" id="bk-x" aria-label="Închide">×</button></div>
+    <div class="steps" id="bk-steps"></div>
+    <div class="sheet-body" id="bk-body"></div>
+    <div class="sheet-foot" id="bk-foot"></div>
+  </div>
+</div>
+
+<script>
+const CFG = {"slug": "ana-dental-care", "name": "Ana Dental Care", "code": "ANA", "hours": {"1": [8.0, 20.0], "2": [8.0, 20.0], "3": [8.0, 20.0], "4": [8.0, 20.0], "5": [8.0, 20.0], "6": [10.0, 14.0]}, "booking": {"mode": "slots", "title": "Programează-te", "cta": "Programează-te", "bar": "Programează", "slot": 30, "lastBefore": 0.5, "busy": 0.4, "days": 14, "options": {"label": "Ce tratament", "items": [{"name": "Consultație inițială", "hint": "20 lei"}, {"name": "Urgență", "hint": "durere, umflătură"}, {"name": "Profilaxie", "hint": "fluorizare, sigilare"}, {"name": "Consult ortodonție", "hint": "100 lei"}, {"name": "Estetică dentară", "hint": "albire, fațete"}, {"name": "Implant / proteză", "hint": "evaluare"}]}, "confirm": "Confirmă programarea", "doneTitle": "Programare făcută!", "doneText": "Te așteptăm. Cu o zi înainte primești un SMS de reamintire.", "noteLabel": "Ceva ce ar trebui să știm? (opțional)", "notePlaceholder": "ex. mă doare un dinte de 2 zile"}, "gallery": ["img/chair.jpg", "img/clinic.jpg", "img/exam.jpg", "img/aligner.jpg", "img/xray.jpg"], "phone": "0752 960 533"};
+
+const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+const DAYS = ['Duminică', 'Luni', 'Marți', 'Miercuri', 'Joi', 'Vineri', 'Sâmbătă'];
+const DSHORT = ['Dum', 'Lun', 'Mar', 'Mie', 'Joi', 'Vin', 'Sâm'];
+const MONTHS = ['ianuarie', 'februarie', 'martie', 'aprilie', 'mai', 'iunie', 'iulie', 'august', 'septembrie', 'octombrie', 'noiembrie', 'decembrie'];
+const fmt = (x) => { const hh = Math.floor(x + 1e-9), mm = Math.round((x - hh) * 60); return String(hh % 24).padStart(2, '0') + ':' + String(mm).padStart(2, '0'); };
+const ymd = (d) => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+const lei = (n) => n.toLocaleString('ro-RO') + ' lei';
+// Ocupare simulată, aceeași la fiecare vizită (până se leagă de calendarul real al firmei)
+function busy(key, rate) { let h = 2166136261; for (const c of CFG.slug + key) { h ^= c.charCodeAt(0); h = Math.imul(h, 16777619); } return ((h >>> 0) % 1000) / 1000 < rate; }
+let mine = []; try { mine = JSON.parse(localStorage.getItem('bk:' + CFG.slug) || '[]'); } catch {}
+const isMine = (k) => mine.includes(k);
+
+// --- Meniu fix + burger
+const head = $('#head');
+const onScroll = () => { const s = scrollY > 40; head.classList.toggle('solid', s); head.classList.toggle('top', !s); };
+addEventListener('scroll', onScroll, { passive: true }); onScroll();
+const drawer = $('#drawer'), burger = $('#burger');
+const lock = (on) => document.body.classList.toggle('lock', on);
+function setDrawer(open) { drawer.classList.toggle('open', open); drawer.setAttribute('aria-hidden', String(!open)); burger.setAttribute('aria-expanded', String(open)); lock(open); if (open) $('#drawer-x').focus(); }
+burger.onclick = () => setDrawer(true);
+$('#drawer-x').onclick = () => setDrawer(false);
+$$('#drawer nav a').forEach((a) => a.addEventListener('click', () => setDrawer(false)));
+
+// --- Slideshow sus
+const slides = $$('.slide'), sdots = $$('.sdot'); let si = 0, stimer;
+function show(i) { si = (i + slides.length) % slides.length; slides.forEach((s, k) => s.classList.toggle('on', k === si)); sdots.forEach((d, k) => d.classList.toggle('on', k === si)); }
+const auto = () => { clearInterval(stimer); if (!matchMedia('(prefers-reduced-motion: reduce)').matches) stimer = setInterval(() => show(si + 1), 5500); };
+sdots.forEach((d) => d.onclick = () => { show(+d.dataset.i); auto(); });
+let tx = null; const hero = $('.hero');
+hero.addEventListener('touchstart', (e) => tx = e.touches[0].clientX, { passive: true });
+hero.addEventListener('touchend', (e) => { if (tx === null) return; const dx = e.changedTouches[0].clientX - tx; if (Math.abs(dx) > 50) { show(si + (dx < 0 ? 1 : -1)); auto(); } tx = null; });
+auto();
+
+// --- Galerie pe tot ecranul
+const lb = $('#lb'), lbImg = $('#lb-img'); let gi = 0;
+$('#lb-dots').innerHTML = CFG.gallery.map(() => '<i></i>').join('');
+function lbShow(i) { gi = (i + CFG.gallery.length) % CFG.gallery.length; lbImg.src = CFG.gallery[gi]; $('#lb-count').textContent = (gi + 1) + ' / ' + CFG.gallery.length; $$('#lb-dots i').forEach((d, k) => d.classList.toggle('on', k === gi)); }
+function lbOpen(i) { lbShow(i); lb.classList.add('open'); lock(true); $('#lb-x').focus(); }
+function lbClose() { lb.classList.remove('open'); lock(false); }
+$$('.gal .g').forEach((g) => g.onclick = () => lbOpen(+g.dataset.g));
+$('#lb-prev').onclick = () => lbShow(gi - 1); $('#lb-next').onclick = () => lbShow(gi + 1); $('#lb-x').onclick = lbClose;
+lb.addEventListener('click', (e) => { if (e.target === lb) lbClose(); });
+let lx = null;
+lb.addEventListener('touchstart', (e) => lx = e.touches[0].clientX, { passive: true });
+lb.addEventListener('touchend', (e) => { if (lx === null) return; const dx = e.changedTouches[0].clientX - lx; if (Math.abs(dx) > 40) lbShow(gi + (dx < 0 ? 1 : -1)); lx = null; });
+
+// --- Prețuri pe categorii
+$$('.tabs button').forEach((b) => b.onclick = () => { $$('.tabs button').forEach((x) => x.classList.toggle('on', x === b)); $$('.price-grid .cat').forEach((c, i) => c.classList.toggle('on', i === +b.dataset.t)); });
+
+// --- Program: deschis acum, azi
+const H = CFG.hours, now = new Date(), d0 = now.getDay(), h0 = now.getHours() + now.getMinutes() / 60;
+const today = H[d0], open = !!today && h0 >= today[0] && h0 < today[1];
+let next = null; for (let i = 0; i < 8 && !next; i++) { const dd = (d0 + i) % 7, hs = H[dd]; if (hs && (i > 0 || h0 < hs[0])) next = [i, dd, hs[0]]; }
+$('#dot').classList.toggle('closed', !open);
+$('#status').textContent = open ? `Deschis acum · până la ${fmt(today[1])}` : next ? `Închis acum · deschidem ${next[0] === 0 ? 'azi' : next[0] === 1 ? 'mâine' : DAYS[next[1]].toLowerCase()} la ${fmt(next[2])}` : 'Închis acum';
+const trow = $$('#hours tr').find((r) => r.dataset.days.split(',').includes(String(d0)));
+if (trow) { trow.classList.add('today'); $('#today-line').textContent = 'Azi: ' + trow.cells[1].textContent; $('#fact-today').textContent = (open ? 'Deschis · ' : '') + trow.cells[1].textContent; }
+if (matchMedia('(min-width: 901px)').matches) $('#hrs').open = true;
+
+addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') { if (bk.classList.contains('open')) closeBk(); else if (lb.classList.contains('open')) lbClose(); else if (drawer.classList.contains('open')) setDrawer(false); }
+  if (lb.classList.contains('open') && e.key === 'ArrowRight') lbShow(gi + 1);
+  if (lb.classList.contains('open') && e.key === 'ArrowLeft') lbShow(gi - 1);
+});
+
+// --- Programare
+const B = CFG.booking, bk = $('#bk'), body = $('#bk-body'), foot = $('#bk-foot'), stepsEl = $('#bk-steps');
+const STEPS = B.mode === 'slots' ? ['choose', 'when', 'you', 'done'] : B.mode === 'range' ? ['choose', 'range', 'you', 'done'] : ['choose', 'date', 'you', 'done'];
+let st;
+function reset() { st = { step: 0, opt: B.options ? B.options.items[0] : null, day: null, time: null, from: null, to: null, month: 0, party: B.party ? B.party.def : 0, name: '', phone: '', note: '' }; }
+function openBk() { reset(); setDrawer(false); bk.classList.add('open'); lock(true); render(); setTimeout(() => $('#bk-x').focus(), 50); }
+function closeBk() { bk.classList.remove('open'); lock(false); }
+$$('[data-book]').forEach((b) => b.addEventListener('click', (e) => { e.preventDefault(); openBk(); }));
+$('#bk-x').onclick = closeBk; bk.addEventListener('click', (e) => { if (e.target === bk) closeBk(); });
+
+function daysAhead(n) { const out = []; const t = new Date(); t.setHours(0, 0, 0, 0); for (let i = 0; i < n; i++) { const d = new Date(t); d.setDate(t.getDate() + i); out.push(d); } return out; }
+function slotsFor(d) {
+  const hs = H[d.getDay()]; if (!hs) return [];
+  const step = (B.slot || 30) / 60, last = hs[1] - (B.lastBefore ?? step);
+  const out = [], isToday = ymd(d) === ymd(new Date()), nowH = new Date().getHours() + new Date().getMinutes() / 60;
+  for (let x = Math.ceil(hs[0] / step - 1e-9) * step; x <= last + 1e-9; x += step) {
+    const key = ymd(d) + ' ' + fmt(x);
+    out.push({ t: fmt(x), taken: (isToday && x <= nowH + 1) || busy(key, B.busy ?? 0.35) || isMine(key) });
+  }
+  return out;
+}
+const freeCount = (d) => slotsFor(d).filter((s) => !s.taken).length;
+function dayTaken(d) { const k = ymd(d); return (B.closedDays || []).includes(d.getDay()) || busy('d' + k, B.busy ?? 0.3) || isMine(k); }
+function nightPrice(d) { const r = st.opt; const wk = d.getDay() === 5 || d.getDay() === 6; return wk && r.weekend ? r.weekend : r.price; }
+function rangeNights() { if (!st.from || !st.to) return []; const out = []; const d = new Date(st.from); while (d < st.to) { out.push(new Date(d)); d.setDate(d.getDate() + 1); } return out; }
+const optName = (o) => (o && (o.name || o)) || '';
+
+function render() {
+  const name = STEPS[st.step];
+  stepsEl.innerHTML = STEPS.slice(0, -1).map((_, i) => `<i class="${i <= st.step ? 'on' : ''}"></i>`).join('');
+  stepsEl.style.visibility = name === 'done' ? 'hidden' : 'visible';
+  let html = '', canNext = true, nextLabel = 'Continuă';
+  if (name === 'choose') {
+    if (B.options) html += `<p class="lbl">${esc(B.options.label)}</p><div class="opts">` + B.options.items.map((o, i) => `<button type="button" class="opt ${optName(st.opt) === optName(o) ? 'on' : ''}" data-o="${i}">${esc(optName(o))}${o.hint ? `<small>${esc(o.hint)}</small>` : o.price ? `<small>de la ${lei(o.price)} / noapte</small>` : ''}</button>`).join('') + `</div>`;
+    if (B.party) html += `<p class="lbl">${esc(B.party.label)}</p><div class="stepper"><button type="button" id="pm" aria-label="Mai puțin">−</button><b id="pv">${st.party}</b><button type="button" id="pp" aria-label="Mai mult">+</button><span style="color:var(--muted)">${esc(B.party.unit || '')}</span></div>`;
+    if (B.intro) html += `<p class="demo-note">${esc(B.intro)}</p>`;
+  }
+  if (name === 'when') {
+    const ds = daysAhead(B.days || 14);
+    html += `<p class="lbl">${esc(B.dayLabel || 'Alege ziua')}</p><div class="days">` + ds.map((d, i) => { const early = i < (B.skipDays || 0), n = early ? 0 : freeCount(d), k = ymd(d), opened = !!H[d.getDay()]; return `<button type="button" class="day ${st.day === k ? 'on' : ''}" data-d="${k}" ${n ? '' : 'disabled'}><small>${DSHORT[d.getDay()]}</small><b>${d.getDate()}</b><em>${early ? 'prea curând' : opened ? (n ? n + ' libere' : 'plin') : 'închis'}</em></button>`; }).join('') + `</div>`;
+    if (st.day) {
+      const d = new Date(st.day + 'T00:00'), sl = slotsFor(d);
+      html += `<p class="lbl">Ore libere · ${DAYS[d.getDay()]}, ${d.getDate()} ${MONTHS[d.getMonth()]}</p><div class="slots">` + sl.map((s) => `<button type="button" class="slot ${st.time === s.t ? 'on' : ''}" data-t="${s.t}" ${s.taken ? 'disabled' : ''}>${s.t}</button>`).join('') + `</div><div class="legend"><span><i style="background:var(--bg);border:1px solid var(--line)"></i>liber</span><span><i style="background:var(--line)"></i>ocupat</span></div>`;
+    } else html += `<p class="demo-note">Zilele pline și cele în care e închis nu se pot alege.</p>`;
+    canNext = !!(st.day && st.time);
+  }
+  if (name === 'date' || name === 'range') {
+    const base = new Date(); base.setDate(1); base.setHours(0, 0, 0, 0); const m = new Date(base); m.setMonth(base.getMonth() + st.month);
+    const first = (m.getDay() + 6) % 7, dim = new Date(m.getFullYear(), m.getMonth() + 1, 0).getDate(), t0 = new Date(); t0.setHours(0, 0, 0, 0);
+    const hint = name === 'range' ? (st.from && !st.to ? 'Alege data plecării' : 'Alege data sosirii') : 'Alege data';
+    html += `<p class="lbl">${hint}</p><div class="cal-head"><button type="button" class="cal-nav" id="cm" ${st.month ? '' : 'disabled'} aria-label="Luna anterioară">‹</button><b>${MONTHS[m.getMonth()]} ${m.getFullYear()}</b><button type="button" class="cal-nav" id="cp" ${st.month < (B.months || 6) - 1 ? '' : 'disabled'} aria-label="Luna următoare">›</button></div><div class="cal">` + ['L', 'Ma', 'Mi', 'J', 'V', 'S', 'D'].map((w) => `<span class="wd">${w}</span>`).join('') + '<span></span>'.repeat(first);
+    for (let i = 1; i <= dim; i++) {
+      const d = new Date(m.getFullYear(), m.getMonth(), i), k = ymd(d), past = d < t0 || (B.minDays && (d - t0) / 864e5 < B.minDays);
+      let cls = past ? 'past' : dayTaken(d) ? 'taken' : '';
+      if (name === 'date' && st.day === k) cls = 'on';
+      if (name === 'range') { if ((st.from && k === ymd(st.from)) || (st.to && k === ymd(st.to))) cls = 'edge'; else if (st.from && st.to && d > st.from && d < st.to) cls = 'mid'; }
+      const off = past || cls === 'taken';
+      html += `<button type="button" class="${cls}" data-k="${k}" ${off ? 'disabled' : ''} aria-label="${i} ${MONTHS[d.getMonth()]}${cls === 'taken' ? ', ocupat' : ''}">${i}</button>`;
+    }
+    html += `</div><div class="legend"><span><i style="background:var(--bg);border:1px solid var(--line)"></i>liber</span><span><i style="border:1px solid var(--muted);opacity:.5"></i>${esc(B.takenLabel || 'ocupat')}</span></div>`;
+    if (name === 'range') {
+      const n = rangeNights();
+      if (n.length) html += `<div class="summary" style="margin-top:14px"><div><span>${n.length} ${n.length === 1 ? 'noapte' : 'nopți'} · ${esc(optName(st.opt))}</span><b>${lei(n.reduce((a, d) => a + nightPrice(d), 0))}</b></div></div>`;
+      canNext = n.length > 0;
+    } else canNext = !!st.day;
+  }
+  if (name === 'you') {
+    html += `<div class="summary">${summaryRows()}</div><p class="lbl">Datele tale</p>
+      <div class="field"><label for="f-name">Nume</label><input id="f-name" autocomplete="name" value="${esc(st.name)}" placeholder="Numele tău"></div>
+      <div class="field"><label for="f-phone">Telefon</label><input id="f-phone" type="tel" inputmode="tel" autocomplete="tel" value="${esc(st.phone)}" placeholder="07xx xxx xxx"></div>
+      ${B.noteLabel ? `<div class="field"><label for="f-note">${esc(B.noteLabel)}</label><textarea id="f-note" rows="2" placeholder="${esc(B.notePlaceholder || '')}">${esc(st.note)}</textarea></div>` : ''}
+      <p class="err" id="f-err"></p>`;
+    nextLabel = B.confirm || 'Confirmă';
+  }
+  if (name === 'done') {
+    const seed = st.name + st.phone + (st.time || '') + (st.day || '') + (st.from ? ymd(st.from) : '');
+    const ref = CFG.code + '-' + (Math.abs([...seed].reduce((a, c) => (a * 31 + c.charCodeAt(0)) | 0, 7)) % 9000 + 1000);
+    html += `<div class="done"><div class="check">✓</div><h4>${esc(B.doneTitle || 'Gata, te așteptăm!')}</h4><p>${esc(B.doneText || 'Primești confirmarea prin SMS.')}</p><span class="ref">${ref}</span></div><div class="summary">${summaryRows()}</div><p class="demo-note">Demo: în site-ul final, cererea ajunge direct la ${esc(CFG.name)} (email/SMS), iar clientul primește confirmarea automat.</p>`;
+    nextLabel = 'Închide';
+  }
+  body.innerHTML = html;
+  foot.innerHTML = (st.step > 0 && name !== 'done' ? `<button type="button" class="btn line" id="bk-back">Înapoi</button>` : '') + `<button type="button" class="btn" id="bk-next" ${canNext ? '' : 'disabled'}>${nextLabel}</button>`;
+  bind(name);
+}
+function summaryRows() {
+  const rows = [];
+  if (B.options) rows.push([B.options.label, optName(st.opt)]);
+  if (B.party) rows.push([B.party.label, st.party + ' ' + (B.party.unit || '')]);
+  if (st.day) { const d = new Date(st.day + 'T00:00'); rows.push(['Data', `${DAYS[d.getDay()]}, ${d.getDate()} ${MONTHS[d.getMonth()]}`]); }
+  if (st.time) rows.push(['Ora', st.time]);
+  if (st.from && st.to) { const n = rangeNights(); rows.push(['Sosire', `${DAYS[st.from.getDay()]}, ${st.from.getDate()} ${MONTHS[st.from.getMonth()]}`], ['Plecare', `${DAYS[st.to.getDay()]}, ${st.to.getDate()} ${MONTHS[st.to.getMonth()]}`], ['Total', lei(n.reduce((a, d) => a + nightPrice(d), 0)) + ` · ${n.length} ${n.length === 1 ? 'noapte' : 'nopți'}`]); }
+  if (st.name) rows.push(['Nume', st.name]);
+  if (st.phone) rows.push(['Telefon', st.phone]);
+  return rows.map(([a, b]) => `<div><span>${esc(a)}</span><b>${esc(b)}</b></div>`).join('');
+}
+function bind(name) {
+  $$('.opt', body).forEach((b) => b.onclick = () => { st.opt = B.options.items[+b.dataset.o]; st.from = st.to = null; render(); });
+  if ($('#pm')) { $('#pm').onclick = () => { st.party = Math.max(B.party.min, st.party - (B.party.step || 1)); $('#pv').textContent = st.party; }; $('#pp').onclick = () => { st.party = Math.min(B.party.max, st.party + (B.party.step || 1)); $('#pv').textContent = st.party; }; }
+  $$('.day', body).forEach((b) => b.onclick = () => { st.day = b.dataset.d; st.time = null; render(); $('.slots', body)?.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); });
+  $$('.slot', body).forEach((b) => b.onclick = () => { st.time = b.dataset.t; render(); $('#bk-next')?.scrollIntoView({ block: 'nearest' }); });
+  if ($('#cm')) { $('#cm').onclick = () => { st.month--; render(); }; $('#cp').onclick = () => { st.month++; render(); }; }
+  $$('.cal button[data-k]', body).forEach((b) => b.onclick = () => {
+    const d = new Date(b.dataset.k + 'T00:00');
+    if (name === 'date') st.day = b.dataset.k;
+    else if (!st.from || st.to || d <= st.from) { st.from = d; st.to = null; }
+    else { const x = new Date(st.from); let ok = true; x.setDate(x.getDate() + 1); while (x < d) { if (dayTaken(x)) ok = false; x.setDate(x.getDate() + 1); } if (ok) st.to = d; else { st.from = d; st.to = null; } }
+    render();
+  });
+  const back = $('#bk-back'); if (back) back.onclick = () => { st.step--; render(); };
+  $('#bk-next').onclick = () => {
+    if (name === 'done') return closeBk();
+    if (name === 'you') {
+      st.name = $('#f-name').value.trim(); st.phone = $('#f-phone').value.trim(); st.note = $('#f-note')?.value.trim() || '';
+      const digits = st.phone.replace(/\D/g, '');
+      if (st.name.length < 2) { $('#f-err').textContent = 'Scrie-ți numele.'; return; }
+      if (!/^(40)?0?7\d{8}$/.test(digits) && !/^0[23]\d{8}$/.test(digits)) { $('#f-err').textContent = 'Numărul nu pare corect (ex. 0722 123 456).'; return; }
+      if (st.time) mine.push(st.day + ' ' + st.time); else if (st.day) mine.push(st.day); else rangeNights().forEach((d) => mine.push(ymd(d)));
+      try { localStorage.setItem('bk:' + CFG.slug, JSON.stringify(mine)); } catch {}
+    }
+    st.step++; render(); body.scrollTop = 0;
+  };
+}
+
+</script>
+</body>
+</html>
